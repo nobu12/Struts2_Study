@@ -6,11 +6,8 @@ public class HelloWorldAction extends ActionSupport {
 	private String name;
 
 	public String execute() throws Exception {
-		if ("SECRET".equals(name)) {
-			return SUCCESS;
-		} else {
-			return ERROR;
-		}
+		System.out.println("Inside action...");
+		return "success";
 	}
 
 	public String getName() {
