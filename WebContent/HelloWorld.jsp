@@ -8,6 +8,8 @@
 <title>Hello World</title>
 </head>
 <body>
-	Hello World, <s:property value="name" />
+	Hello World, <s:property value="name" /><br/>
+	values of key1: <s:property value="key1" /><br/>
+	values of key2: <s:property value="key2" /><br/>
 </body>
 </html>

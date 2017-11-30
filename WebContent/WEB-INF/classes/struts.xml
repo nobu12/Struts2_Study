@@ -7,18 +7,10 @@
 <constant name="struts.devMode" value="true" />
 	<package name="heloworld" extends="struts-default">
 
-		<interceptors>
-			<interceptor name="myinterceptor"
-			  class ="com.tutorialspoint.struts2.MyInterceptor" />
-		</interceptors>
-
 		<action name="hello"
 			class="com.tutorialspoint.struts2.HelloWorldAction"
 			method="execute">
-			<interceptor-ref name="params" />
-			<interceptor-ref name="myinterceptor" />
 			<result name="success">/HelloWorld.jsp</result>
-			<result name="error">/AccessDenied.jsp</result>
 		</action>
 	</package>
 </struts>
