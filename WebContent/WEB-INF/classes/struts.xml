@@ -5,12 +5,20 @@
 
 <struts>
 <constant name="struts.devMode" value="true" />
-	<package name="heloworld" extends="struts-default">
+<constant name="struts.custom.i18n.resources" value="global" />
+	<package name="helloworld" extends="struts-default" namespace="/">
 
-		<action name="hello"
-			class="com.tutorialspoint.struts2.HelloWorldAction"
+		<action name="empinfo"
+			class="com.tutorialspoint.struts2.Employee"
 			method="execute">
-			<result name="success">/HelloWorld.jsp</result>
+			<result name="input">/index.jsp</result>
+			<result name="success">/success.jsp</result>
+		</action>
+
+		<action name="locale"
+			class="com.tutorialspoint.struts2.Locale"
+			method="execute">
+			<result name="success">/index.jsp</result>
 		</action>
 	</package>
 </struts>

@@ -7,14 +7,28 @@
 
 <html>
 <head>
-<title>Hello World</title>
+<title>Employee Form with Multilingual Support</title>
 </head>
 <body>
-  <h1>Hello World From Struts2</h1>
-  <form action="hello">
-    <label for="name">Please enter your name</label><br/>
-    <input type="text" name="name" />
-    <input type="submit" value="Say Hello" />
-  </form>
+	<h1>
+		<s:text name="global.heading" />
+	</h1>
+	<s:url id="indexEN" namespace="/" action="locale">
+		<s:param name="request_locale">en</s:param>
+	</s:url>
+	<s:url id="indexES" namespace="/" action="locale">
+		<s:param name="request_locale">es</s:param>
+	</s:url>
+	<s:url id="indexFR" namespace="/" action="locale">
+		<s:param name="request_locale">fr</s:param>
+	</s:url>
+	<s:a href="%{indexEN}">English</s:a>
+	<s:a href="%{indexES}">Spanish</s:a>
+	<s:a href="%{indexFR}">France</s:a>
+	<s:form action="empinfo" method="post" namespace="/">
+		<s:textfield name="name" key="global.name" size="20" />
+		<s:textfield name="age" key="global.age" size="20" />
+		<s:submit name="submit" key="global.submit" />
+	</s:form>
 </body>
 </html>

@@ -14,5 +14,8 @@
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="WebContent/global_es.properties"/>
+	<classpathentry exported="true" kind="lib" path="WebContent/global_fr.properties"/>
+	<classpathentry kind="lib" path="WebContent/global.properties"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
